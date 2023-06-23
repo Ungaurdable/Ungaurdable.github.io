@@ -1,0 +1,199 @@
+/* CSS for the overall page. */
+
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* CSS for the titles. */
+
+h1 {
+    font-size: 1rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+    font-weight:normal;
+    margin: 0;
+}
+
+.title {
+    align-items: center;
+    padding: 0.25rem 0.5rem 1.5rem 0.25rem;
+}
+
+.section {
+    background-color: #ffe4c4;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0.2rem 0.2rem 0.2em rgba(0, 0, 0, 0.2);
+}
+
+/* CSS for the layout. */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+    row-gap: 1.5rem;
+    grid-template-areas:
+    "header header"
+    "items name"
+    "items name"
+    "items payment"
+    "items payment"
+    "items payment"
+    ". ."
+    ". ."
+    "price-label price-cost"
+    "price-label price-cost"
+    "order order";
+}
+
+.header {
+    justify-content: center;
+    display: flex;
+    background-color: #43281c;
+    color: #fbf2c0;
+    align-items: center;
+    grid-area: header;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.items {
+    grid-area: items;
+}
+
+.name {
+    grid-area: name;
+}
+
+.payment {
+    grid-area: payment;
+}
+
+.price-label {
+    grid-area: price-label;
+    padding: 3rem 3rem 0 3rem;
+}
+
+.price-cost {
+    grid-area: price-cost;
+    padding: 3rem 3rem 0 3rem;
+}
+
+.order {
+    grid-area: order;
+    justify-content: center;
+    border-radius: 3rem;
+    padding: 0.5rem;
+    margin: 0 5rem;
+    background-color: #daa06d;
+}
+
+/* Coffee logo CSS. */
+
+.logo {
+    height: 1rem;
+    margin: 0.25rem;
+}
+
+/* Mostly CSS for the table inside ITEMS section. Also included in other sections, for example .bb */
+
+td {
+    padding: 0.5rem;
+    margin: 0;
+}
+
+.hr {
+    border-top: 1px #daa06d solid;
+}
+
+.itemtable {
+    width: 100%;
+}
+
+.bb {
+    color: black;
+    font-weight: bold;
+}
+
+.lb {
+    color: rgb(92, 48, 24);
+}
+
+.pbottom {
+    padding-bottom: 1.5rem;
+}
+
+.ptop {
+    padding-top: 1.5rem;
+}
+
+/* CSS for the inputs. */
+
+.form-input {
+    position: relative;
+    display: block;
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+.enter {
+    border: 1.5px rgb(92, 48, 24) solid;
+    border-radius: 3rem;
+    padding: 0.8rem 2rem 0.8rem 2.15rem;
+    background-color: #ffe4c4;
+    font-size: 1.25rem;
+    display: block;
+    width: 100%;
+}
+
+.input-label {
+    background-color: #ffe4c4;
+    color: rgb(92, 48, 24);
+    font-size: 1rem;
+    position: absolute;
+    left: 2rem;
+    top: -0.9rem;
+    padding: 0.25rem;
+}
+
+/* CSS for the prices and order section */
+
+.pl-layout {
+    display: block;
+    text-align: right;
+}
+
+.pc-layout {
+    display: block;
+}
+
+.place-order {
+    display: block;
+    text-align: center;
+    /* border: 2px brown solid; */
+    margin: 0;
+    text-decoration: none;
+    color: #18191A;
+}
+
+/* CSS to fix spacing in the layout */
+
+.mtop1 {
+    margin-top: 1.5rem;
+}
+
+.mleft {
+    margin-left: 1.5rem;
+}
+
+.mright {
+    margin-right: 1.5rem;
+}
