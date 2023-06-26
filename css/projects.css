@@ -1,100 +1,19 @@
-/* For the overall page */
-
-* {
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-    color: #054a91
-}
-
-h1, h2 {
-    font-weight: bold;
-    /* border: 2px black solid; */
-    margin: 0;
-}
-
-.section {
-    padding: 1rem;
-    /* border: 2px black solid; */
-}
-
-
-body {
-    margin: auto;
-    padding: 0;
-    max-width: 100%;
-    background-color: #dbe4ee;
-}
-
-/* For when I want certain styles on certain text */
-
-.italic {
-    font-style: italic;
-}
-
-.links {
-    color: #f17300;
-}
-
-/* First model navbar - this is before fully learning flexbox and javascript*/
-
-
-.header {
-    position: fixed;
-    background-color: #81a4cd;
-    width: 100%;
-    top: 0;
-    margin: 0;
-    overflow: hidden;
-    font-size: 1.25rem;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #f17300;
-}
-
-nav {
-    margin: 0;
-}
-
-nav ul {
-    list-style-type: none;
-    justify-content: space-around;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-nav li {
-    text-align: center;
-    padding: 0;
-    display: inline-block;
-    margin: 0.5rem 0.25rem 0.5rem 0.25rem;
-}
-
-nav a {
-    background-color: #f17300;
-    border-radius: 5rem;
-    padding: 0.25rem;
-    width: 12rem;
-    display: block;
-    text-decoration: none;
-    /* font-weight: bold; */
-    color: #2a3540;
-}
-
-.mainbody {
-    margin-top: 3.48rem;
-}
-
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 1rem;
     column-gap: 1rem;
     grid-template-areas:
-    "CIWDv3 FarukB";
+    "CIWDv3-html CIWDv3-css"
+    "FarukB .";
 }
 
-.CIWDv3-project {
-    grid-area: CIWDv3;
+.html-blog-project {
+    grid-area: CIWDv3-html;
+}
+
+.css-project {
+    grid-area: CIWDv3-css;
 }
 
 .faruk-biryani {

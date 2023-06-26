@@ -6,7 +6,7 @@
     color: #054a91
 }
 
-h1 {
+h1, h2 {
     font-weight: bold;
     /* border: 2px black solid; */
     margin: 0;
@@ -76,11 +76,9 @@ nav a {
     width: 12rem;
     display: block;
     text-decoration: none;
-    /* font-weight: bold; */
+    font-weight: bold;
     color: #054a91;
 }
-
-
 
 .mainbody {
     margin-top: 3.48rem;
