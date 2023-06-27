@@ -12,11 +12,17 @@ h1, h2 {
     margin: 0;
 }
 
+h1 {
+    border-bottom: 2px #f17300 solid;
+    display: block;
+    padding: 0.5rem 0;
+    text-align: left;
+}
+
 .section {
     padding: 1rem;
     /* border: 2px black solid; */
 }
-
 
 body {
     margin: auto;
@@ -32,7 +38,7 @@ body {
 }
 
 .links {
-    color: #f17300;
+    color:darkred;
 }
 
 /* First model navbar - this is before fully learning flexbox and javascript*/
@@ -52,32 +58,80 @@ body {
 
 nav {
     margin: 0;
+    display: flex;
+}
+
+.back-home {
+    grid-area: back-home;
+    background-color: #f17300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 15%;
+}
+
+div.back-home a {
+    display: inline-block;
 }
 
 nav ul {
     list-style-type: none;
-    justify-content: space-around;
+    justify-content: flex-end;
     padding: 0;
     margin: 0;
     display: flex;
+    width: 85%;
 }
 
-nav li {
+nav li.nav-list-item {
     text-align: center;
     padding: 0;
     display: inline-block;
     margin: 0.5rem 0.25rem 0.5rem 0.25rem;
 }
 
-nav a {
+nav a.nav-link {
     background-color: #f17300;
     border-radius: 5rem;
-    padding: 0.25rem;
-    width: 12rem;
+    padding: 0.25rem 1rem;
     display: block;
     text-decoration: none;
     font-weight: bold;
     color: #054a91;
+}
+
+nav li.nav-icon {
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    nav li.nav-icon {
+        display: inline-block;
+        color:#054a91;
+        border-radius: 1rem;
+        text-align: center;
+        padding: 0;
+        display: inline-block;
+        margin: 0.5rem 0.25rem 0.5rem 0.25rem;
+    }
+
+    nav li.nav-icon a.nav-link {
+        width: 3rem;
+        color: #054a91;
+    }
+
+    nav li.nav-list-item {
+        display: none;
+    }
+
+    nav ul {
+        list-style-type: none;
+        justify-content: flex-end;
+        padding: 0;
+        margin: 0;
+        display: flex;
+    }
 }
 
 .mainbody {
