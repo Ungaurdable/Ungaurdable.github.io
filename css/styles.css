@@ -73,6 +73,9 @@ nav {
 
 div.back-home a {
     display: inline-block;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 0.2rem;
 }
 
 nav ul {
@@ -131,6 +134,10 @@ nav li.nav-icon {
         padding: 0;
         margin: 0;
         display: flex;
+    }
+
+    div.back-home a.home-word {
+        display: none;
     }
 }
 
