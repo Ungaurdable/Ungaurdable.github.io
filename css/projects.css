@@ -5,7 +5,7 @@
     column-gap: 1rem;
     grid-template-areas:
     "CIWDv3-html CIWDv3-css"
-    "FarukB .";
+    "CIWDv3-NP FarukB";
 }
 
 .html-blog-project {
@@ -20,11 +20,15 @@
     grid-area: FarukB;
 }
 
+.next-project {
+    grid-area: CIWDv3-NP;
+}
+
 .psection {
     border: 2px #054a91 solid;
     border-radius: 1rem;
     padding: 1.5rem;
-    background-color: coral;
+    background-color: #f17300;
 }
 
 @media screen and (max-width: 600px) {
@@ -36,6 +40,7 @@
     grid-template-areas:
     "CIWDv3-html"
     "CIWDv3-css"
+    "CIWDv3-NP"
     "FarukB";
     }
 }
