@@ -1,22 +1,15 @@
-/* For the overall page */
+/* Basic stuff for all pages */
 
 * {
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-    color: #054a91
-}
-
-h1, h2 {
-    font-weight: bold;
-    /* border: 2px black solid; */
     margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    color: #054a91;
 }
 
-h1 {
-    border-bottom: 2px #f17300 solid;
-    display: block;
-    padding: 0.5rem 0;
-    text-align: left;
+body {
+    background-color: #dbe4ee;
 }
 
 .section {
@@ -24,11 +17,24 @@ h1 {
     /* border: 2px black solid; */
 }
 
-body {
-    margin: auto;
-    padding: 0;
-    max-width: 100%;
-    background-color: #dbe4ee;
+h1, h2, h3 {
+    font-weight: bold;
+    /* border: 2px black solid; */
+    margin-bottom: 0.5rem;
+}
+
+h1 {
+    border-bottom: 2px #f17300 solid;
+    display: block;
+    padding: 0.5rem 0;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+
+
+.mainbody {
+    margin-top: 4.25rem;
 }
 
 /* For when I want certain styles on certain text */
@@ -41,106 +47,186 @@ body {
     color:darkred;
 }
 
-/* First model navbar - this is before fully learning flexbox and javascript*/
+/* Navbar - Mostly for computer screen */
 
+/* div.logo p a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 0.25rem;
+    font-weight: bold;
+} */
 
-.header {
-    position: fixed;
+.logo {
     background-color: #81a4cd;
-    width: 100%;
+    padding: 0.5rem;
+}
+
+.logo-img {
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 50%;
+}
+
+header {
+    /* border: 2px black solid; */
+    z-index: 999;
+    position: fixed;
     top: 0;
-    margin: 0;
-    overflow: hidden;
-    font-size: 1.25rem;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #f17300;
+    width: 100%;
+    background-color: #81a4cd;
+    z-index:995;
+    border: none;
 }
 
 nav {
-    margin: 0;
     display: flex;
+    justify-content: space-between;
+    height: 100%;
+    /* border: green 2px solid; */
+    align-items: flex-end;
 }
 
-.back-home {
-    grid-area: back-home;
-    background-color: #f17300;
+ul.nav-list {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    width: 15%;
-}
-
-div.back-home a {
-    display: inline-block;
-    font-weight: bold;
-    text-decoration: none;
-    margin: 0 0.2rem;
-}
-
-nav ul {
     list-style-type: none;
     justify-content: flex-end;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    width: 85%;
+    height: 100%;
+    align-items: flex-end
+    /* border: 2px red dashed; */
 }
 
-nav li.nav-list-item {
-    text-align: center;
-    padding: 0;
-    display: inline-block;
-    margin: 0.5rem 0.25rem 0.5rem 0.25rem;
-}
-
-nav a.nav-link {
+li.nav-list-item {
+    padding: 0.5rem 1rem; 
+    border: none;
+    height: 100%;
     background-color: #f17300;
-    border-radius: 5rem;
-    padding: 0.25rem 1rem;
-    display: block;
-    text-decoration: none;
-    font-weight: bold;
-    color: #054a91;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    z-index:999;
+    margin: 0 0.1rem;
 }
 
-nav li.nav-icon {
+li.active {
+    background-color: #dbe4ee;
+    padding: 0.7rem 2rem;
+    font-size: 1.25rem;
+}
+
+a.nav-link {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.hamburger {
     display: none;
 }
 
-@media screen and (max-width: 800px) {
-    nav li.nav-icon {
-        display: inline-block;
-        color:#054a91;
-        border-radius: 1rem;
-        text-align: center;
-        padding: 0;
-        display: inline-block;
-        margin: 0.5rem 0.25rem 0.5rem 0.25rem;
-    }
-
-    nav li.nav-icon a.nav-link {
-        width: 3rem;
-        color: #054a91;
-    }
-
-    nav li.nav-list-item {
-        display: none;
-    }
-
-    nav ul {
-        list-style-type: none;
-        justify-content: flex-end;
-        padding: 0;
-        margin: 0;
-        display: flex;
-    }
-
-    div.back-home a.home-word {
-        display: none;
-    }
+.navmenu {
+    display: none;
 }
 
-.mainbody {
-    margin-top: 3.48rem;
+/* For mobile screen navbar */
+
+@media screen and (max-width: 800px) {
+
+
+    ul.nav-list {
+        display: none;
+    }
+
+    .hamburger {
+        display: inline-block;
+        background-color:#f17300;
+        margin: 0.5rem;
+        padding: 0.3rem 0.8rem;
+        border-radius: 0.5rem;
+        font-size: 1.5rem;
+    }
+
+    nav {
+        align-items: center;
+    }
+
+    .navmenu {
+        top: 0;
+        right: -15rem;
+        position: fixed;
+        /* background: hsl(0 0% 0% / 0.6); */
+        background-color: rgba(5, 74, 145, 0.7);
+        backdrop-filter: blur(0.5rem);
+        /* background-color: #f17300; */
+        padding: 0;
+        width: 15rem;
+        display: block;
+        font-weight: bold;
+        height: 100%;
+        border-left: 4px #054a91 solid;
+        transition: 0.6s ease-in-out;
+    }
+
+    #navMenu.nav-is-active {
+        right: 0;
+    }
+
+    ul.navmenu-list {
+        list-style-type: none;
+    }
+    
+    li.menu-items {
+        /* border-bottom: 0.5px #054a91 solid; */
+        border-bottom: 0.5px #f17300 solid;
+        padding: 0.5rem;
+        margin: 0 0.5rem;
+    }
+    
+    /* li.menu-items:last-child {
+        border-bottom: none;
+    } */
+    
+    li.menu-items:first-child {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 0 0.5rem;
+        padding: 0.5rem 1rem;
+        background-color: #f17300;
+        font-size: 1.5rem;
+        border-bottom: 2px #054a91 solid;
+    }
+    
+    .fa-x {
+        font-size: 1.5rem;
+    }
+    
+    a.menu-links {
+        text-decoration: none;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1rem;
+        /* color:#054a91;
+        border-left: 4px solid #054a91; */
+        color: #f17300;
+        border-left: 4px solid #f17300;
+        padding: 0.25rem;
+    }
+
+    .for-navmenu {
+        /* color: #054a91; */
+        color: #f17300;
+    }
+
+    li.nav-active {
+        border-bottom: #dbe4ee 0.5px solid;
+        padding: 0.75rem 0.75rem 0.75rem 0.5rem;
+    }
+
+    li.nav-active a.menu-links {
+        color: #dbe4ee;
+        border-left: 4px solid #dbe4ee;
+        padding: 0.5rem 0.5rem 0.5rem 0.25rem;
+        font-size: 1.2rem;
+    }
+
+    li.nav-active a.menu-links .for-navmenu {
+        color: #dbe4ee;
+    }
 }

@@ -10,23 +10,84 @@
     <script src="https://kit.fontawesome.com/b85a2be528.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="header">
-        <div class="nav">
-            <nav>
-                <div class="back-home">
-                    <a class="large-home" href="index.html"><i class="fa-solid fa-house"></i></a>
-                    <a class="home-word" href="index.html">Home</a>
-                </div>
-                <ul class="nav-list">
-                    <li class="nav-list-item"><a class="nav-link" href="basketball.html">Basketball</a></li>
-                    <li class="nav-list-item"><a class="nav-link" href="foodlife.html">Food Life</a></li>
-                    <li class="nav-list-item"><a class="nav-link" href="projects.html">Current Projects</a></li>
-                    <li class="nav-icon"><a class="nav-link" href="basketball.html"><i class="fa-solid fa-basketball"></i></a></li>
-                    <li class="nav-icon"><a class="nav-link" href="foodlife.html"><i class="fa-solid fa-utensils"></i></a></li>
-                    <li class="nav-icon"><a class="nav-link" href="projects.html"><i class="fa-solid fa-folder"></i></a></li>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img class="logo-img" src="/img/kklogo2.png" alt="">
+                </a>
+            </div>
+            <ul class="nav-list">
+                <li class="nav-list-item">
+                    <a href="index.html" class="nav-link">
+                        Home
+                        <i class="fa-solid fa-house"></i>
+                    </a>
+                </li>
+                <li class="nav-list-item">
+                    <a href="basketball.html" class="nav-link">
+                        Basketball
+                        <i class="fa-solid fa-basketball"></i>
+                    </a>
+                </li>
+                <li class="nav-list-item active">
+                    <a href="foodlife.html" class="nav-link">
+                        Food Life
+                        <i class="fa-solid fa-utensils"></i>
+                    </a>
+                </li>
+                <li class="nav-list-item">
+                    <a href="projects.html" class="nav-link">
+                        Projects
+                        <i class="fa-solid fa-folder"></i>
+                    </a>
+                </li>
+            </ul>
+            <div class="hamburger" onclick="toggleNavMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="navmenu" id="navMenu">
+                <ul class="navmenu-list">
+                    <li class="menu-items">
+                        <p>Kavin Kumanan</p>
+                        <i class="fa-solid fa-x" onclick="hideNavMenu()"></i>
+                    </li>
+                    <li class="menu-items">
+                        <a href="/index.html" class="menu-links">
+                            Home
+                            <i class="fa-solid fa-house for-navmenu"></i>
+                        </a>
+                    </li>
+                    <li class="menu-items">
+                        <a href="/basketball.html" class="menu-links">
+                            Basketball
+                            <i class="fa-solid fa-basketball for-navmenu"></i>
+                        </a>
+                    </li>
+                    <li class="menu-items nav-active">
+                        <a href="/foodlife.html" class="menu-links">
+                            Food Life
+                            <i class="fa-solid fa-utensils for-navmenu"></i>
+                        </a>
+                    </li>
+                    <li class="menu-items">
+                        <a href="/projects.html" class="menu-links">
+                            Projects
+                            <i class="fa-solid fa-folder for-navmenu"></i>
+                        </a>
+                    </li>
                 </ul>
-            </nav>
-        </div>
-    </div>
+            </div>
+        </nav>
+    </header>
+    <script>
+        function toggleNavMenu() {
+            document.getElementById('navMenu').classList.toggle('nav-is-active');
+        }
+
+        function hideNavMenu() {
+            document.getElementById('navMenu').classList.remove('nav-is-active');
+        }
+    </script>
 </body>
 </html>
