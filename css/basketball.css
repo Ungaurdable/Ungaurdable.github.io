@@ -1,0 +1,44 @@
+.bb-grid {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1rem;
+    column-gap: 1rem;
+    grid-template-areas:
+        "genbb genbb"
+        "ckbb enloebb";
+}
+
+.bbsection {
+    border: 4px #8d86c9 solid;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    background-color: transparent;
+}
+
+.genbb-info {
+    grid-area: genbb;
+    border: none;
+    padding: 0 1rem;
+}
+
+.ckbb-info {
+    grid-area: ckbb;
+}
+
+.enloebb-info {
+    grid-area: enloebb;
+}
+
+@media screen and (max-width: 600px) {
+    .bb-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 1rem;
+        column-gap: 1rem;
+        grid-template-areas:
+            "genbb"
+            "ckbb"
+            "enloebb";
+    }
+}
